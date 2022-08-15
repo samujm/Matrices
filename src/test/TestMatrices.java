@@ -1,4 +1,5 @@
 package test;
+import domain.Persona;
 
 public class TestMatrices {
     public static void main(String[] args) {
@@ -32,6 +33,7 @@ public class TestMatrices {
         /*--------------------------------------- Sintaxis simplificada para crear una matriz ---------------------------------------------------------*/       
        
         String frutas[][] = {{"Naranja","Limon"},{"Fresa","Zarzamora","Mora"}}; //No tienen que ser matrices cuadradas
+        imprimir(frutas); //MANDA LLAMAR EL METODO
         
         /*--------------------------------------- Imprimiendo los datos de la matriz con un for anidado ---------------------------------------------------------*/       
         
@@ -40,6 +42,29 @@ public class TestMatrices {
                 System.out.println("Frutas " + ren + "-" + col + ": " + frutas[ren][col]);
             }
         }
-              
+        
+        /*---------------------------------------------CREAR UNA MATRIZ DE TIPO OBJECT -------------------------------------------------------------------------*/
+        Persona personas[][] = new Persona[2][3];
+        
+        personas[0][0] = new Persona("Juan");
+        personas[0][1] = new Persona("Karla");
+        personas[0][2] = new Persona("Sammy");
+        personas[1][0] = new Persona("Laurita");
+        personas[1][1] = new Persona("Estrellita");
+       // personas[1][2] = new Persona("Paco");
+           
+        imprimir(personas); //IMPRIME EL OBJETO PERSONA
+    }
+    
+    /*------------------------------------------------- AGREGA METODO IMPRIMIR PARA IMPRIMIR LA MATRIZ DE OBJETOS ---------------------------------------------*/
+    //Recibe como argumento un objeto de tipo object para que se pueda imprimir Personas o Frutas
+    //No es necesario especificar el ancho y el largo de la matriz ya que apunta a la referencia solo se define la variable matriz[][]
+    public static void imprimir(Object matriz[][]){
+        
+        for (int ren = 0; ren < matriz.length; ren++) {
+            for (int col = 0; col < matriz[ren].length; col++) {
+                System.out.println("Matriz " + ren + "-" + col + ": " + matriz[ren][col]);
+            }
+        }
     }
 }
