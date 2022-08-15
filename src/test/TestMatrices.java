@@ -31,7 +31,15 @@ public class TestMatrices {
         
         /*--------------------------------------- Sintaxis simplificada para crear una matriz ---------------------------------------------------------*/       
        
-        String frutas[][] = {{"Naranja","Limon"},{"Fresa","Zarzamora"}};
+        String frutas[][] = {{"Naranja","Limon"},{"Fresa","Zarzamora","Mora"}}; //No tienen que ser matrices cuadradas
+        
+        /*--------------------------------------- Imprimiendo los datos de la matriz con un for anidado ---------------------------------------------------------*/       
+        
+        for (int ren = 0; ren < frutas.length; ren++) {
+            for (int col = 0; col < frutas[ren].length; col++) {
+                System.out.println("Frutas " + ren + "-" + col + ": " + frutas[ren][col]);
+            }
+        }
               
     }
 }
