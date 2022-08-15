@@ -21,7 +21,13 @@ public class TestMatrices {
         System.out.println("edades [1][1]= " + edades[1][1]);
         System.out.println("edades [2][0]= " + edades[2][0]);
         System.out.println("edades [2][1]= " + edades[2][1]);
-
-
+        
+        /*--------------------------------------- Iterar elementos de la matriz con un for anidado ---------------------------------------------------------*/       
+        for (int ren = 0; ren < edades.length; ren++) { //largo de los renglones
+            for (int col = 0; col < edades[ren].length; col++) { //largo de las columnas
+                System.out.println("edades = " + ren + "-" + col + ": " + edades[ren][col]);
+            }
+        }
+        
     }
 }
