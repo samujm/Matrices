@@ -29,5 +29,9 @@ public class TestMatrices {
             }
         }
         
+        /*--------------------------------------- Sintaxis simplificada para crear una matriz ---------------------------------------------------------*/       
+       
+        String frutas[][] = {{"Naranja","Limon"},{"Fresa","Zarzamora"}};
+              
     }
 }
